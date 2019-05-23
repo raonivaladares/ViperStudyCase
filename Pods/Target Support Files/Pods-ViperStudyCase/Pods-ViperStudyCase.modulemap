@@ -1,0 +1,6 @@
+framework module Pods_ViperStudyCase {
+  umbrella header "Pods-ViperStudyCase-umbrella.h"
+
+  export *
+  module * { export * }
+}
