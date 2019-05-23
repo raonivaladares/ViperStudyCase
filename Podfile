@@ -6,6 +6,7 @@ target 'ViperStudyCase' do
   use_frameworks!
 
   # Pods for ViperStudyCase
+  pod 'SnapKit'
 
   target 'ViperStudyCaseTests' do
     inherit! :search_paths
