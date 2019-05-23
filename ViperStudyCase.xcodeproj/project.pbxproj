@@ -12,7 +12,6 @@
 		AEEEF79DC251A68938E853F9 /* Pods_ViperStudyCaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB82A716F141C6D45BE05E4B /* Pods_ViperStudyCaseTests.framework */; };
 		FE4ABF652296DB1A00B1F781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF642296DB1A00B1F781 /* AppDelegate.swift */; };
 		FE4ABF672296DB1A00B1F781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF662296DB1A00B1F781 /* ViewController.swift */; };
-		FE4ABF6A2296DB1A00B1F781 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4ABF682296DB1A00B1F781 /* Main.storyboard */; };
 		FE4ABF6C2296DB1B00B1F781 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4ABF6B2296DB1B00B1F781 /* Assets.xcassets */; };
 		FE4ABF6F2296DB1B00B1F781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4ABF6D2296DB1B00B1F781 /* LaunchScreen.storyboard */; };
 		FE4ABF7A2296DB1B00B1F781 /* ViperStudyCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF792296DB1B00B1F781 /* ViperStudyCaseTests.swift */; };
@@ -49,7 +48,6 @@
 		FE4ABF612296DB1A00B1F781 /* ViperStudyCase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperStudyCase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4ABF642296DB1A00B1F781 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE4ABF662296DB1A00B1F781 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FE4ABF692296DB1A00B1F781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE4ABF6B2296DB1B00B1F781 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE4ABF6E2296DB1B00B1F781 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE4ABF702296DB1B00B1F781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 				EEBAC6D2E9AF3315015FAE2E /* Pods-ViperStudyCaseUITests.debug.xcconfig */,
 				57FE9E2EB6BE7BFDECD77881 /* Pods-ViperStudyCaseUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,7 +137,6 @@
 			children = (
 				FE4ABF642296DB1A00B1F781 /* AppDelegate.swift */,
 				FE4ABF662296DB1A00B1F781 /* ViewController.swift */,
-				FE4ABF682296DB1A00B1F781 /* Main.storyboard */,
 				FE4ABF6B2296DB1B00B1F781 /* Assets.xcassets */,
 				FE4ABF6D2296DB1B00B1F781 /* LaunchScreen.storyboard */,
 				FE4ABF702296DB1B00B1F781 /* Info.plist */,
@@ -275,7 +271,6 @@
 			files = (
 				FE4ABF6F2296DB1B00B1F781 /* LaunchScreen.storyboard in Resources */,
 				FE4ABF6C2296DB1B00B1F781 /* Assets.xcassets in Resources */,
-				FE4ABF6A2296DB1A00B1F781 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,14 +401,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FE4ABF682296DB1A00B1F781 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE4ABF692296DB1A00B1F781 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FE4ABF6D2296DB1B00B1F781 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
