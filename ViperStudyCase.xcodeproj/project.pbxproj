@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		21039FFFFC72BCEAFC9E20C4 /* Pods_ViperStudyCaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F03C534FB157D0DA1FFCB99 /* Pods_ViperStudyCaseUITests.framework */; };
-		2DEE5108EDBA9E8A228CF2AB /* Pods_ViperStudyCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A258AAD90EDE348FB12182CF /* Pods_ViperStudyCase.framework */; };
+		9DE242630C20B96EC28B0D4E /* Pods_ViperStudyCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE30856229812FC00D38EF8 /* Pods_ViperStudyCase.framework */; };
 		AEEEF79DC251A68938E853F9 /* Pods_ViperStudyCaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB82A716F141C6D45BE05E4B /* Pods_ViperStudyCaseTests.framework */; };
 		FE4ABF652296DB1A00B1F781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF642296DB1A00B1F781 /* AppDelegate.swift */; };
 		FE4ABF672296DB1A00B1F781 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF662296DB1A00B1F781 /* ViewController.swift */; };
@@ -57,6 +57,8 @@
 		FE4ABF802296DB1B00B1F781 /* ViperStudyCaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperStudyCaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4ABF842296DB1B00B1F781 /* ViperStudyCaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperStudyCaseUITests.swift; sourceTree = "<group>"; };
 		FE4ABF862296DB1B00B1F781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEE30856229812FC00D38EF8 /* Pods_ViperStudyCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ViperStudyCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE308582298144700D38EF8 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DEE5108EDBA9E8A228CF2AB /* Pods_ViperStudyCase.framework in Frameworks */,
+				9DE242630C20B96EC28B0D4E /* Pods_ViperStudyCase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +92,8 @@
 		1C4326AC8926BA5264317E46 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FEE308582298144700D38EF8 /* SnapKit.framework */,
+				FEE30856229812FC00D38EF8 /* Pods_ViperStudyCase.framework */,
 				A258AAD90EDE348FB12182CF /* Pods_ViperStudyCase.framework */,
 				BB82A716F141C6D45BE05E4B /* Pods_ViperStudyCaseTests.framework */,
 				7F03C534FB157D0DA1FFCB99 /* Pods_ViperStudyCaseUITests.framework */,
@@ -488,6 +492,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -542,6 +547,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
