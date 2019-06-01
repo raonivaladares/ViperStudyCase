@@ -8,8 +8,11 @@ final class AppStartupRouter {
     }
     
     func presentInitialViewController() {
-        let viewController = ListToDoItemsModuleAssembler().assemble()
-        window.rootViewController = UINavigationController(rootViewController: viewController)
+        let navigationController = UINavigationController()
+        let viewController = ListToDoItemsModuleAssembler()
+            .assemble(navigationController: navigationController)
+        navigationController.viewControllers = [viewController]
+        window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }
 }

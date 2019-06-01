@@ -1,9 +1,10 @@
-import Foundation
+import UIKit
 
 final class ListToDoItemsModuleAssembler {
-    func assemble() -> ListToDoItemsViewController {
+    func assemble(navigationController: UINavigationController) -> ListToDoItemsViewController {
         let viewController = ListToDoItemsViewController()
-        let presenter = ListToDoItemsPresenter()
+        let router = ListToDoItemsRouter(navigationController: navigationController)
+        let presenter = ListToDoItemsPresenter(router: router)
         
         viewController.presenter = presenter
         presenter.viewController = viewController

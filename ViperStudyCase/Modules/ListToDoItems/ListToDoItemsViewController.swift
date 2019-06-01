@@ -5,11 +5,15 @@ protocol ListToDoItemsViewControllerInterface {
 }
 
 class ListToDoItemsViewController: UIViewController {
+    // MARK: - View Private properties
+    
     private let tableView: UITableView = {
         let tableView = UITableView()
         
         return tableView
     }()
+    
+    // MARK: - Public properties
     
     var presenter: ListToDoItemsPresenterInterface?
     
