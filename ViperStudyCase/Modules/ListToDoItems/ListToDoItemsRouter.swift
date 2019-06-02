@@ -8,6 +8,9 @@ final class ListToDoItemsRouter {
     }
     
     func pushAddToDoItemModule() {
-        navigationController.pushViewController(AddToDoItemViewController(), animated: true)
+        let viewController = AddToDoItemAssembler()
+            .assemble(navigationController: navigationController)
+        
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

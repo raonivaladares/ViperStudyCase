@@ -1,15 +1,35 @@
 import UIKit
 
+protocol AddToDoItemViewControllerInterface {
+    func presentError(error: ApplicationError)
+}
+
 final class AddToDoItemViewController: UIViewController {
     // MARK: - View Private properties
     
+    private let nameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Name"
+        
+        return label
+    }()
+    
     private let nameEditText: UITextField = {
         let textField = UITextField()
+        textField.placeholder = "place holder"
+        
+        var bottomLine = CALayer()
+        bottomLine.frame = CGRect.init(x: 0, y: 30, width: 300, height: 1)
+        bottomLine.backgroundColor = UIColor.gray.cgColor
+        textField.borderStyle = UITextField.BorderStyle.none
+        textField.layer.addSublayer(bottomLine)
         
         return textField
     }()
     
     // MARK: - Public properties
+    
+    var presenter: AddToDoItemPresenterInterface?
     
     // MARK: - init
     
@@ -19,6 +39,8 @@ final class AddToDoItemViewController: UIViewController {
         configureNavigation()
         configureViews()
         configureConstraints()
+        
+        view.backgroundColor = .white
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -26,22 +48,51 @@ final class AddToDoItemViewController: UIViewController {
     }
 }
 
+// MARK: - AddToDoItemViewControllerInterface
+
+extension AddToDoItemViewController: AddToDoItemViewControllerInterface {
+    func presentError(error: ApplicationError) {
+        let alert = UIAlertController(
+            title: error.title,
+            message: error.content,
+            preferredStyle: .alert
+        )
+        
+        present(alert, animated: true)
+    }
+}
+
 // MARK: - View - private methods
 
 extension AddToDoItemViewController {
     private func configureNavigation() {
+        navigationItem.rightBarButtonItem =  UIBarButtonItem(
+            barButtonSystemItem: .done,
+            target: self,
+            action: #selector(navigationRightButtonAction)
+        )
+    }
     
+    @objc private func navigationRightButtonAction() {
+        presenter?.doneButtonWasTapped(descriptionSelected: "aaaaa")
     }
     
     private func configureViews() {
+        view.addSubview(nameLabel)
         view.addSubview(nameEditText)
     }
     
     private func configureConstraints() {
+        nameLabel.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
+            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
+        }
+        
         nameEditText.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.equalToSuperview()
-            $0.trailing.equalToSuperview()
+            $0.top.equalTo(nameLabel.snp.top).offset(20)
+            $0.leading.equalTo(view.safeAreaLayoutGuide.snp.leading).offset(20)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailing).offset(-20)
         }
     }
 }

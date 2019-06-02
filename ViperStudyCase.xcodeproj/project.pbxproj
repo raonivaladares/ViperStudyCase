@@ -15,6 +15,9 @@
 		8402480322A31F0600DF2A7B /* ListToDoItemsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480222A31F0600DF2A7B /* ListToDoItemsPresenter.swift */; };
 		8402480522A322C700DF2A7B /* ListToDoItemsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480422A322C700DF2A7B /* ListToDoItemsRouter.swift */; };
 		8402480722A32F9700DF2A7B /* AddToDoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480622A32F9700DF2A7B /* AddToDoItemViewController.swift */; };
+		8402480922A3FE1600DF2A7B /* AddToDoItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480822A3FE1600DF2A7B /* AddToDoItemPresenter.swift */; };
+		8402480B22A3FFAC00DF2A7B /* AddToDoItemRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480A22A3FFAC00DF2A7B /* AddToDoItemRouter.swift */; };
+		8402480D22A401B100DF2A7B /* AddToDoItemAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480C22A401B100DF2A7B /* AddToDoItemAssembler.swift */; };
 		9DE242630C20B96EC28B0D4E /* Pods_ViperStudyCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE30856229812FC00D38EF8 /* Pods_ViperStudyCase.framework */; };
 		AEEEF79DC251A68938E853F9 /* Pods_ViperStudyCaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB82A716F141C6D45BE05E4B /* Pods_ViperStudyCaseTests.framework */; };
 		FE4ABF652296DB1A00B1F781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF642296DB1A00B1F781 /* AppDelegate.swift */; };
@@ -55,6 +58,9 @@
 		8402480222A31F0600DF2A7B /* ListToDoItemsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListToDoItemsPresenter.swift; sourceTree = "<group>"; };
 		8402480422A322C700DF2A7B /* ListToDoItemsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListToDoItemsRouter.swift; sourceTree = "<group>"; };
 		8402480622A32F9700DF2A7B /* AddToDoItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoItemViewController.swift; sourceTree = "<group>"; };
+		8402480822A3FE1600DF2A7B /* AddToDoItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoItemPresenter.swift; sourceTree = "<group>"; };
+		8402480A22A3FFAC00DF2A7B /* AddToDoItemRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoItemRouter.swift; sourceTree = "<group>"; };
+		8402480C22A401B100DF2A7B /* AddToDoItemAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoItemAssembler.swift; sourceTree = "<group>"; };
 		A258AAD90EDE348FB12182CF /* Pods_ViperStudyCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperStudyCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A7E3872B330EB971DBE6FC /* Pods-ViperStudyCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperStudyCase.release.xcconfig"; path = "Target Support Files/Pods-ViperStudyCase/Pods-ViperStudyCase.release.xcconfig"; sourceTree = "<group>"; };
 		BB82A716F141C6D45BE05E4B /* Pods_ViperStudyCaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperStudyCaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,9 +124,9 @@
 		840247F622A3076E00DF2A7B /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				840247F722A307E200DF2A7B /* ListToDoItems */,
 				840247F922A3084D00DF2A7B /* Edit */,
 				840247F822A307FE00DF2A7B /* Add */,
-				840247F722A307E200DF2A7B /* ListToDoItems */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -139,7 +145,10 @@
 		840247F822A307FE00DF2A7B /* Add */ = {
 			isa = PBXGroup;
 			children = (
+				8402480C22A401B100DF2A7B /* AddToDoItemAssembler.swift */,
 				8402480622A32F9700DF2A7B /* AddToDoItemViewController.swift */,
+				8402480822A3FE1600DF2A7B /* AddToDoItemPresenter.swift */,
+				8402480A22A3FFAC00DF2A7B /* AddToDoItemRouter.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -460,10 +469,13 @@
 				FE4ABF672296DB1A00B1F781 /* ListToDoItemsViewController.swift in Sources */,
 				8402480122A31E4C00DF2A7B /* ToDoItem.swift in Sources */,
 				8402480722A32F9700DF2A7B /* AddToDoItemViewController.swift in Sources */,
+				8402480D22A401B100DF2A7B /* AddToDoItemAssembler.swift in Sources */,
 				840247FB22A31CEE00DF2A7B /* AppStartupRouter.swift in Sources */,
 				840247FD22A31D8600DF2A7B /* ListToDoItemsModuleAssembler.swift in Sources */,
+				8402480B22A3FFAC00DF2A7B /* AddToDoItemRouter.swift in Sources */,
 				FE4ABF652296DB1A00B1F781 /* AppDelegate.swift in Sources */,
 				8402480322A31F0600DF2A7B /* ListToDoItemsPresenter.swift in Sources */,
+				8402480922A3FE1600DF2A7B /* AddToDoItemPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
