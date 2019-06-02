@@ -4,7 +4,7 @@ protocol AddToDoItemViewControllerInterface: class {
     func presentError(error: ApplicationError)
 }
 
-final class AddToDoItemViewController: UIViewController {
+final class AddToDoItemViewController: UIViewController, AlertPresentable {
     // MARK: - View Private properties
     
     private let nameLabel: UILabel = {
@@ -52,13 +52,7 @@ final class AddToDoItemViewController: UIViewController {
 
 extension AddToDoItemViewController: AddToDoItemViewControllerInterface {
     func presentError(error: ApplicationError) {
-        let alert = UIAlertController(
-            title: error.title,
-            message: error.content,
-            preferredStyle: .alert
-        )
-        
-        present(alert, animated: true)
+        presentAlert(with: error)
     }
 }
 
@@ -96,3 +90,22 @@ extension AddToDoItemViewController {
         }
     }
 }
+
+protocol AlertPresentable: UIViewController {
+    func presentAlert(with error: ApplicationError)
+}
+
+extension AlertPresentable {
+    func presentAlert(with error: ApplicationError) {
+        let alert = UIAlertController(
+            title: error.title,
+            message: error.content,
+            preferredStyle: .alert
+        )
+        
+        let action = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
+}
+
