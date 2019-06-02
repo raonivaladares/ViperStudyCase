@@ -151,9 +151,9 @@
 			children = (
 				8402480C22A401B100DF2A7B /* AddToDoItemAssembler.swift */,
 				8402480622A32F9700DF2A7B /* AddToDoItemViewController.swift */,
+				8402480E22A42AE400DF2A7B /* AddToDoItemIteractor.swift */,
 				8402480822A3FE1600DF2A7B /* AddToDoItemPresenter.swift */,
 				8402480A22A3FFAC00DF2A7B /* AddToDoItemRouter.swift */,
-				8402480E22A42AE400DF2A7B /* AddToDoItemIteractor.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
