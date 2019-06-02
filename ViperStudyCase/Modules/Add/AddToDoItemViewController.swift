@@ -1,6 +1,6 @@
 import UIKit
 
-protocol AddToDoItemViewControllerInterface {
+protocol AddToDoItemViewControllerInterface: class {
     func presentError(error: ApplicationError)
 }
 

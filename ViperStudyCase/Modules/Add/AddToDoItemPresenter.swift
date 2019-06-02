@@ -5,7 +5,7 @@ protocol AddToDoItemPresenterInterface {
 }
 
 final class AddToDoItemPresenter {
-    var viewController: AddToDoItemViewControllerInterface?
+    weak var viewController: AddToDoItemViewControllerInterface?
     private let interactor: AddToDoItemIteractorInterface
     private let router: AddToDoItemRouter
     
@@ -42,21 +42,3 @@ extension AddToDoItemPresenter: AddToDoItemPresenterInterface {
         
     }
 }
-
-protocol AddToDoItemIteractorInterface {
-    func createToDoItem(with description: String) throws
-}
-
-final class AddToDoItemIteractor {
-    func createToDoItem(with description: String) throws {
-        let toDoItem = try ToDoItem(description: description)
-        print(toDoItem)
-    }
-}
-
-struct ApplicationError: Error {
-    let title: String
-    let content: String
-}
-
-extension AddToDoItemIteractor: AddToDoItemIteractorInterface {}
