@@ -4,9 +4,7 @@ struct ToDoItem {
     let description: String
     
     init(description: String) throws {
-        guard Rules().isValid(description: description) else {
-            throw ToDoItemError(kind: .invalidDescriptionSize)
-        }
+        let description = try Rules().isValid(description: description)
         
         self.description = description
     }
@@ -14,23 +12,39 @@ struct ToDoItem {
 
 extension ToDoItem {
     struct Rules {
-        func isValid(description: String) -> Bool {
-            return false
+        enum Constants {
+            static let minCharactersRequired = 3
+            static let maxCharactersRequired = 20
+        }
+        
+        func isValid(description: String) throws -> String {
+            if description.count < Constants.minCharactersRequired {
+                throw ToDoItemError(kind: .shortDescription)
+            } else if description.count < Constants.maxCharactersRequired {
+                throw ToDoItemError(kind: .bigDescription)
+            }
+            
+            return description
         }
     }
 }
 
-struct ToDoItemError: Error {
+struct ToDoItemError: ApplicationErrorType {
     enum Kind {
-        case invalidDescriptionSize
+        case shortDescription
+        case bigDescription
     }
     
-    private let kind: Kind
+    let title: String
+    let content: String
     
     init(kind: Kind) {
-        self.kind = kind
+        title = "Oops"
+        switch kind {
+        case .shortDescription:
+            content = "ToDoItem can not be small than 3 characters"
+        case .bigDescription:
+            content = "ToDoItem can not be bigger than 20 characters"
+        }
     }
-    
-    let title = "Title error"
-    let body = "Error body"
 }

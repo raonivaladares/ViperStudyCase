@@ -19,7 +19,7 @@
 		8402480B22A3FFAC00DF2A7B /* AddToDoItemRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480A22A3FFAC00DF2A7B /* AddToDoItemRouter.swift */; };
 		8402480D22A401B100DF2A7B /* AddToDoItemAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480C22A401B100DF2A7B /* AddToDoItemAssembler.swift */; };
 		8402480F22A42AE400DF2A7B /* AddToDoItemIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480E22A42AE400DF2A7B /* AddToDoItemIteractor.swift */; };
-		8402481122A42B0F00DF2A7B /* ApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402481022A42B0F00DF2A7B /* ApplicationError.swift */; };
+		8402481122A42B0F00DF2A7B /* ApplicationErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402481022A42B0F00DF2A7B /* ApplicationErrorType.swift */; };
 		9DE242630C20B96EC28B0D4E /* Pods_ViperStudyCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE30856229812FC00D38EF8 /* Pods_ViperStudyCase.framework */; };
 		AEEEF79DC251A68938E853F9 /* Pods_ViperStudyCaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB82A716F141C6D45BE05E4B /* Pods_ViperStudyCaseTests.framework */; };
 		FE4ABF652296DB1A00B1F781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF642296DB1A00B1F781 /* AppDelegate.swift */; };
@@ -28,6 +28,9 @@
 		FE4ABF6F2296DB1B00B1F781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4ABF6D2296DB1B00B1F781 /* LaunchScreen.storyboard */; };
 		FE4ABF7A2296DB1B00B1F781 /* ViperStudyCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF792296DB1B00B1F781 /* ViperStudyCaseTests.swift */; };
 		FE4ABF852296DB1B00B1F781 /* ViperStudyCaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF842296DB1B00B1F781 /* ViperStudyCaseUITests.swift */; };
+		FED21D8622A9AD7D0023CFF6 /* GenericApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */; };
+		FED21D8822A9B2040023CFF6 /* Error+ApplicationErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */; };
+		FED21D8B22A9B2570023CFF6 /* ToDoItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8A22A9B2570023CFF6 /* ToDoItemWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +67,7 @@
 		8402480A22A3FFAC00DF2A7B /* AddToDoItemRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoItemRouter.swift; sourceTree = "<group>"; };
 		8402480C22A401B100DF2A7B /* AddToDoItemAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoItemAssembler.swift; sourceTree = "<group>"; };
 		8402480E22A42AE400DF2A7B /* AddToDoItemIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoItemIteractor.swift; sourceTree = "<group>"; };
-		8402481022A42B0F00DF2A7B /* ApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationError.swift; sourceTree = "<group>"; };
+		8402481022A42B0F00DF2A7B /* ApplicationErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationErrorType.swift; sourceTree = "<group>"; };
 		A258AAD90EDE348FB12182CF /* Pods_ViperStudyCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperStudyCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A7E3872B330EB971DBE6FC /* Pods-ViperStudyCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperStudyCase.release.xcconfig"; path = "Target Support Files/Pods-ViperStudyCase/Pods-ViperStudyCase.release.xcconfig"; sourceTree = "<group>"; };
 		BB82A716F141C6D45BE05E4B /* Pods_ViperStudyCaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperStudyCaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +84,9 @@
 		FE4ABF802296DB1B00B1F781 /* ViperStudyCaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperStudyCaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4ABF842296DB1B00B1F781 /* ViperStudyCaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperStudyCaseUITests.swift; sourceTree = "<group>"; };
 		FE4ABF862296DB1B00B1F781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericApplicationError.swift; sourceTree = "<group>"; };
+		FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+ApplicationErrorType.swift"; sourceTree = "<group>"; };
+		FED21D8A22A9B2570023CFF6 /* ToDoItemWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemWorker.swift; sourceTree = "<group>"; };
 		FEE30856229812FC00D38EF8 /* Pods_ViperStudyCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ViperStudyCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE308582298144700D38EF8 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,6 +160,7 @@
 				8402480E22A42AE400DF2A7B /* AddToDoItemIteractor.swift */,
 				8402480822A3FE1600DF2A7B /* AddToDoItemPresenter.swift */,
 				8402480A22A3FFAC00DF2A7B /* AddToDoItemRouter.swift */,
+				FED21D8A22A9B2570023CFF6 /* ToDoItemWorker.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -168,8 +175,8 @@
 		840247FE22A31E2C00DF2A7B /* Comum */ = {
 			isa = PBXGroup;
 			children = (
+				8402481222A43E0C00DF2A7B /* Errors */,
 				840247FF22A31E3A00DF2A7B /* Model */,
-				8402481022A42B0F00DF2A7B /* ApplicationError.swift */,
 			);
 			path = Comum;
 			sourceTree = "<group>";
@@ -182,11 +189,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		8402481222A43E0C00DF2A7B /* New Group */ = {
+		8402481222A43E0C00DF2A7B /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				8402481022A42B0F00DF2A7B /* ApplicationErrorType.swift */,
+				FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */,
+				FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */,
 			);
-			path = "New Group";
+			name = Errors;
+			path = ../Errors;
 			sourceTree = "<group>";
 		};
 		AEE62BB50ED54E97351F45A4 /* Pods */ = {
@@ -227,7 +238,6 @@
 		FE4ABF632296DB1A00B1F781 /* ViperStudyCase */ = {
 			isa = PBXGroup;
 			children = (
-				8402481222A43E0C00DF2A7B /* New Group */,
 				840247FE22A31E2C00DF2A7B /* Comum */,
 				840247F622A3076E00DF2A7B /* Modules */,
 				FE4ABF642296DB1A00B1F781 /* AppDelegate.swift */,
@@ -478,6 +488,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED21D8822A9B2040023CFF6 /* Error+ApplicationErrorType.swift in Sources */,
+				FED21D8B22A9B2570023CFF6 /* ToDoItemWorker.swift in Sources */,
 				840247F522A305B400DF2A7B /* AppDependencies.swift in Sources */,
 				8402480522A322C700DF2A7B /* ListToDoItemsRouter.swift in Sources */,
 				FE4ABF672296DB1A00B1F781 /* ListToDoItemsViewController.swift in Sources */,
@@ -487,9 +499,10 @@
 				840247FB22A31CEE00DF2A7B /* AppStartupRouter.swift in Sources */,
 				840247FD22A31D8600DF2A7B /* ListToDoItemsModuleAssembler.swift in Sources */,
 				8402480B22A3FFAC00DF2A7B /* AddToDoItemRouter.swift in Sources */,
+				FED21D8622A9AD7D0023CFF6 /* GenericApplicationError.swift in Sources */,
 				FE4ABF652296DB1A00B1F781 /* AppDelegate.swift in Sources */,
 				8402480322A31F0600DF2A7B /* ListToDoItemsPresenter.swift in Sources */,
-				8402481122A42B0F00DF2A7B /* ApplicationError.swift in Sources */,
+				8402481122A42B0F00DF2A7B /* ApplicationErrorType.swift in Sources */,
 				8402480922A3FE1600DF2A7B /* AddToDoItemPresenter.swift in Sources */,
 				8402480F22A42AE400DF2A7B /* AddToDoItemIteractor.swift in Sources */,
 			);

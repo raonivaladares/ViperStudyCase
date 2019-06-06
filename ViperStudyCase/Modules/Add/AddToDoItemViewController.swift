@@ -1,7 +1,7 @@
 import UIKit
 
 protocol AddToDoItemViewControllerInterface: class {
-    func presentError(error: ApplicationError)
+    func presentError(error: ApplicationErrorType)
 }
 
 final class AddToDoItemViewController: UIViewController, AlertPresentable {
@@ -51,7 +51,7 @@ final class AddToDoItemViewController: UIViewController, AlertPresentable {
 // MARK: - AddToDoItemViewControllerInterface
 
 extension AddToDoItemViewController: AddToDoItemViewControllerInterface {
-    func presentError(error: ApplicationError) {
+    func presentError(error: ApplicationErrorType) {
         presentAlert(with: error)
     }
 }
@@ -68,7 +68,7 @@ extension AddToDoItemViewController {
     }
     
     @objc private func navigationRightButtonAction() {
-        presenter?.doneButtonWasTapped(descriptionSelected: "aaaaa")
+        presenter?.doneButtonWasTapped(descriptionSelected: nameEditText.text ?? "")
     }
     
     private func configureViews() {
@@ -92,11 +92,11 @@ extension AddToDoItemViewController {
 }
 
 protocol AlertPresentable: UIViewController {
-    func presentAlert(with error: ApplicationError)
+    func presentAlert(with error: ApplicationErrorType)
 }
 
 extension AlertPresentable {
-    func presentAlert(with error: ApplicationError) {
+    func presentAlert(with error: ApplicationErrorType) {
         let alert = UIAlertController(
             title: error.title,
             message: error.content,

@@ -25,20 +25,7 @@ extension AddToDoItemPresenter: AddToDoItemPresenterInterface {
         do {
             try interactor.createToDoItem(with: description)
         } catch {
-            if let toDoItemError = error as? ToDoItemError {
-                let applicationError = ApplicationError(
-                    title: toDoItemError.title,
-                    content: toDoItemError.body
-                )
-                viewController?.presentError(error: applicationError)
-            } else {
-                viewController?.presentError(error: ApplicationError(
-                    title: "Generic Title",
-                    content: "Generic Content")
-                )
-            }
-            
+            viewController?.presentError(error: error.asApplicationError())
         }
-        
     }
 }

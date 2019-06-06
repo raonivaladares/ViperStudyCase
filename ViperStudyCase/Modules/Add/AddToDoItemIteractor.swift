@@ -23,18 +23,3 @@ final class AddToDoItemIteractor {
         }
     }
 }
-
-extension AddToDoItemIteractor: AddToDoItemIteractorInterface {}
-
-protocol ToDoItemWorkerInterface {
-     func save(item: ToDoItem, completion: (Result<Void, Error>) -> Void)
-}
-
-final class ToDoItemWorker: ToDoItemWorkerInterface {
-    func save(item: ToDoItem, completion: (Result<Void, Error>) -> Void) {
-        
-//        completion(Result.success(()))
-        let genericError = ApplicationError(title: "Generic", content: "generic")
-        completion(Result.failure(genericError))
-    }
-}
