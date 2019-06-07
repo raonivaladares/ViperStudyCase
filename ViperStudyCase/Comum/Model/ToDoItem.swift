@@ -20,7 +20,7 @@ extension ToDoItem {
         func isValid(description: String) throws -> String {
             if description.count < Constants.minCharactersRequired {
                 throw ToDoItemError(kind: .shortDescription)
-            } else if description.count < Constants.maxCharactersRequired {
+            } else if description.count > Constants.maxCharactersRequired {
                 throw ToDoItemError(kind: .bigDescription)
             }
             

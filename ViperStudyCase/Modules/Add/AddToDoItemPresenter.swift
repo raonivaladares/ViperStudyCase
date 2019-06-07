@@ -8,13 +8,16 @@ final class AddToDoItemPresenter {
     weak var viewController: AddToDoItemViewControllerInterface?
     private let interactor: AddToDoItemIteractorInterface
     private let router: AddToDoItemRouter
+    private var listID: String
     
     init(
         interactor: AddToDoItemIteractorInterface,
-        router: AddToDoItemRouter) {
+        router: AddToDoItemRouter,
+        listID: String) {
         
         self.interactor = interactor
         self.router = router
+        self.listID = listID
     }
 }
 
@@ -22,10 +25,13 @@ final class AddToDoItemPresenter {
 
 extension AddToDoItemPresenter: AddToDoItemPresenterInterface {
     func doneButtonWasTapped(descriptionSelected description: String) {
-        do {
-            try interactor.createToDoItem(with: description)
-        } catch {
-            viewController?.presentError(error: error.asApplicationError())
+        interactor.addToDoItem(with: description, toListWithID: listID) { result in
+            switch result {
+            case .success:
+                print("deu bom")
+            case .failure(let error):
+                viewController?.presentError(error: error.asApplicationError())
+            }
         }
     }
 }

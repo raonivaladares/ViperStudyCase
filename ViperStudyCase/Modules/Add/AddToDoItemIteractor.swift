@@ -1,25 +1,37 @@
 import Foundation
 
 protocol AddToDoItemIteractorInterface {
-    func createToDoItem(with description: String) throws
+    func addToDoItem(
+        with description: String,
+        toListWithID listID: String,
+        completion: (Result<ToDoItemsList, Error>) -> Void
+    )
 }
 
 final class AddToDoItemIteractor {
-    let toDoItemWoker: ToDoItemWorkerInterface
+    let toDoItemWoker: ToDoItemsListWorkerInterface
     
-    init(toDoItemWoker: ToDoItemWorkerInterface) {
+    init(toDoItemWoker: ToDoItemsListWorkerInterface) {
         self.toDoItemWoker = toDoItemWoker
     }
     
-    func createToDoItem(with description: String) throws {
-        let toDoItem = try ToDoItem(description: description)
-        toDoItemWoker.save(item: toDoItem) { result in
-            switch result {
-            case .success:
-                print("success")
-            case .failure(let error):
-                print("error")
+    func addToDoItem(
+        with description: String,
+        toListWithID listID: String,
+        completion: (Result<ToDoItemsList, Error>) -> Void) {
+        
+        do {
+            let toDoItem = try ToDoItem(description: description)
+            toDoItemWoker.save(item: toDoItem, listID: listID) { result in
+                switch result {
+                case .success(let list):
+                    completion(.success((list)))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
+        } catch {
+            completion(.failure(error))
         }
     }
 }

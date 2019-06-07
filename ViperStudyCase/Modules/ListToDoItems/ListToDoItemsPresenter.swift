@@ -5,7 +5,8 @@ protocol ListToDoItemsPresenterInterface {
 }
 
 final class ListToDoItemsPresenter {
-    let router: ListToDoItemsRouter
+    private let router: ListToDoItemsRouter
+    private let toDoList: ToDoItemsList = ToDoItemsList(id: "22", name: "Stub", items: [])
     
     var viewController: ListToDoItemsViewControllerInterface?
     
@@ -20,7 +21,7 @@ final class ListToDoItemsPresenter {
 extension ListToDoItemsPresenter: ListToDoItemsPresenterInterface {
     func addButtonWasTapped() {
         print("router.pushAddModule")
-        router.pushAddToDoItemModule()
+        router.pushAddToDoItemModule(listID: toDoList.id)
         // start add module
         //router.pushAddModule()
     }

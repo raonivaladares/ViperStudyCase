@@ -2,15 +2,18 @@ import Foundation
 
 extension AddToDoItemIteractor: AddToDoItemIteractorInterface {}
 
-protocol ToDoItemWorkerInterface {
-    func save(item: ToDoItem, completion: (Result<Void, Error>) -> Void)
+protocol ToDoItemsListWorkerInterface {
+    func save(item: ToDoItem, listID: String, completion: (Result<ToDoItemsList, Error>) -> Void)
 }
 
-final class ToDoItemWorker: ToDoItemWorkerInterface {
-    func save(item: ToDoItem, completion: (Result<Void, Error>) -> Void) {
+final class ToDoItemsListWorker: ToDoItemsListWorkerInterface {
+    let dataStorage: ApplicationDataStorageInterface = ApplicationDataStorage()
+    
+    func save(
+        item: ToDoItem,
+        listID: String,
+        completion: (Result<ToDoItemsList, Error>) -> Void) {
         
-        //        completion(Result.success(()))
-        let genericError = GenericApplicationError()
-        completion(Result.failure(genericError))
+        
     }
 }
