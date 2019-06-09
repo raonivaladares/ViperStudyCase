@@ -9,10 +9,10 @@ protocol AddToDoItemIteractorInterface {
 }
 
 final class AddToDoItemIteractor {
-    let toDoItemWoker: ToDoItemsListWorkerInterface
+    let toDoItemsListWoker: ToDoItemsListCreaterWorkerInterface
     
-    init(toDoItemWoker: ToDoItemsListWorkerInterface) {
-        self.toDoItemWoker = toDoItemWoker
+    init(toDoItemsListWoker: ToDoItemsListCreaterWorkerInterface) {
+        self.toDoItemsListWoker = toDoItemsListWoker
     }
     
     func addToDoItem(
@@ -22,7 +22,7 @@ final class AddToDoItemIteractor {
         
         do {
             let toDoItem = try ToDoItem(description: description)
-            toDoItemWoker.save(item: toDoItem, listID: listID) { result in
+            toDoItemsListWoker.create(item: toDoItem, listID: listID) { result in
                 switch result {
                 case .success(let list):
                     completion(.success((list)))
@@ -35,3 +35,5 @@ final class AddToDoItemIteractor {
         }
     }
 }
+
+extension AddToDoItemIteractor: AddToDoItemIteractorInterface {}

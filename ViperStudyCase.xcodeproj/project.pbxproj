@@ -20,6 +20,7 @@
 		8402480D22A401B100DF2A7B /* AddToDoItemAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480C22A401B100DF2A7B /* AddToDoItemAssembler.swift */; };
 		8402480F22A42AE400DF2A7B /* AddToDoItemIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402480E22A42AE400DF2A7B /* AddToDoItemIteractor.swift */; };
 		8402481122A42B0F00DF2A7B /* ApplicationErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8402481022A42B0F00DF2A7B /* ApplicationErrorType.swift */; };
+		8426FBD422AD64B5000B4BA6 /* ApplicationDataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426FBD322AD64B5000B4BA6 /* ApplicationDataStorage.swift */; };
 		9DE242630C20B96EC28B0D4E /* Pods_ViperStudyCase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE30856229812FC00D38EF8 /* Pods_ViperStudyCase.framework */; };
 		AEEEF79DC251A68938E853F9 /* Pods_ViperStudyCaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB82A716F141C6D45BE05E4B /* Pods_ViperStudyCaseTests.framework */; };
 		FE4ABF652296DB1A00B1F781 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF642296DB1A00B1F781 /* AppDelegate.swift */; };
@@ -30,10 +31,9 @@
 		FE4ABF852296DB1B00B1F781 /* ViperStudyCaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF842296DB1B00B1F781 /* ViperStudyCaseUITests.swift */; };
 		FED21D8622A9AD7D0023CFF6 /* GenericApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */; };
 		FED21D8822A9B2040023CFF6 /* Error+ApplicationErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */; };
-		FED21D8B22A9B2570023CFF6 /* ToDoItemWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8A22A9B2570023CFF6 /* ToDoItemWorker.swift */; };
+		FED21D8B22A9B2570023CFF6 /* ListToDoItemsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8A22A9B2570023CFF6 /* ListToDoItemsWorker.swift */; };
 		FED21D8D22AAC4550023CFF6 /* AlertPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8C22AAC4550023CFF6 /* AlertPresentable.swift */; };
 		FED21D9122AAC7CE0023CFF6 /* ToDoItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D9022AAC7CE0023CFF6 /* ToDoItemsList.swift */; };
-		FED21D9322AAEA620023CFF6 /* ListToDoItemsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D9222AAEA620023CFF6 /* ListToDoItemsWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +71,7 @@
 		8402480C22A401B100DF2A7B /* AddToDoItemAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoItemAssembler.swift; sourceTree = "<group>"; };
 		8402480E22A42AE400DF2A7B /* AddToDoItemIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoItemIteractor.swift; sourceTree = "<group>"; };
 		8402481022A42B0F00DF2A7B /* ApplicationErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationErrorType.swift; sourceTree = "<group>"; };
+		8426FBD322AD64B5000B4BA6 /* ApplicationDataStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDataStorage.swift; sourceTree = "<group>"; };
 		A258AAD90EDE348FB12182CF /* Pods_ViperStudyCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperStudyCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A7E3872B330EB971DBE6FC /* Pods-ViperStudyCase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperStudyCase.release.xcconfig"; path = "Target Support Files/Pods-ViperStudyCase/Pods-ViperStudyCase.release.xcconfig"; sourceTree = "<group>"; };
 		BB82A716F141C6D45BE05E4B /* Pods_ViperStudyCaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperStudyCaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,10 +90,9 @@
 		FE4ABF862296DB1B00B1F781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericApplicationError.swift; sourceTree = "<group>"; };
 		FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+ApplicationErrorType.swift"; sourceTree = "<group>"; };
-		FED21D8A22A9B2570023CFF6 /* ToDoItemWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemWorker.swift; sourceTree = "<group>"; };
+		FED21D8A22A9B2570023CFF6 /* ListToDoItemsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListToDoItemsWorker.swift; sourceTree = "<group>"; };
 		FED21D8C22AAC4550023CFF6 /* AlertPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresentable.swift; sourceTree = "<group>"; };
 		FED21D9022AAC7CE0023CFF6 /* ToDoItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsList.swift; sourceTree = "<group>"; };
-		FED21D9222AAEA620023CFF6 /* ListToDoItemsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListToDoItemsWorker.swift; sourceTree = "<group>"; };
 		FEE30856229812FC00D38EF8 /* Pods_ViperStudyCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_ViperStudyCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE308582298144700D38EF8 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,7 +154,6 @@
 				FE4ABF662296DB1A00B1F781 /* ListToDoItemsViewController.swift */,
 				8402480222A31F0600DF2A7B /* ListToDoItemsPresenter.swift */,
 				8402480422A322C700DF2A7B /* ListToDoItemsRouter.swift */,
-				FED21D9222AAEA620023CFF6 /* ListToDoItemsWorker.swift */,
 			);
 			path = ListToDoItems;
 			sourceTree = "<group>";
@@ -167,7 +166,6 @@
 				8402480E22A42AE400DF2A7B /* AddToDoItemIteractor.swift */,
 				8402480822A3FE1600DF2A7B /* AddToDoItemPresenter.swift */,
 				8402480A22A3FFAC00DF2A7B /* AddToDoItemRouter.swift */,
-				FED21D8A22A9B2570023CFF6 /* ToDoItemWorker.swift */,
 			);
 			path = Add;
 			sourceTree = "<group>";
@@ -246,6 +244,7 @@
 		FE4ABF632296DB1A00B1F781 /* ViperStudyCase */ = {
 			isa = PBXGroup;
 			children = (
+				FED21D8A22A9B2570023CFF6 /* ListToDoItemsWorker.swift */,
 				FED21D8E22AAC4620023CFF6 /* Protocols */,
 				840247FE22A31E2C00DF2A7B /* Comum */,
 				840247F622A3076E00DF2A7B /* Modules */,
@@ -255,6 +254,7 @@
 				FE4ABF6B2296DB1B00B1F781 /* Assets.xcassets */,
 				FE4ABF6D2296DB1B00B1F781 /* LaunchScreen.storyboard */,
 				FE4ABF702296DB1B00B1F781 /* Info.plist */,
+				8426FBD322AD64B5000B4BA6 /* ApplicationDataStorage.swift */,
 			);
 			path = ViperStudyCase;
 			sourceTree = "<group>";
@@ -514,8 +514,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FED21D8822A9B2040023CFF6 /* Error+ApplicationErrorType.swift in Sources */,
-				FED21D8B22A9B2570023CFF6 /* ToDoItemWorker.swift in Sources */,
-				FED21D9322AAEA620023CFF6 /* ListToDoItemsWorker.swift in Sources */,
+				FED21D8B22A9B2570023CFF6 /* ListToDoItemsWorker.swift in Sources */,
 				840247F522A305B400DF2A7B /* AppDependencies.swift in Sources */,
 				8402480522A322C700DF2A7B /* ListToDoItemsRouter.swift in Sources */,
 				FE4ABF672296DB1A00B1F781 /* ListToDoItemsViewController.swift in Sources */,
@@ -524,6 +523,7 @@
 				8402480D22A401B100DF2A7B /* AddToDoItemAssembler.swift in Sources */,
 				840247FB22A31CEE00DF2A7B /* AppStartupRouter.swift in Sources */,
 				840247FD22A31D8600DF2A7B /* ListToDoItemsModuleAssembler.swift in Sources */,
+				8426FBD422AD64B5000B4BA6 /* ApplicationDataStorage.swift in Sources */,
 				FED21D8D22AAC4550023CFF6 /* AlertPresentable.swift in Sources */,
 				8402480B22A3FFAC00DF2A7B /* AddToDoItemRouter.swift in Sources */,
 				FED21D8622A9AD7D0023CFF6 /* GenericApplicationError.swift in Sources */,
