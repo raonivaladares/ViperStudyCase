@@ -1,7 +1,7 @@
 import Foundation
 
 protocol ToDoItemsListCreaterWorkerInterface {
-    func create(item: ToDoItem, listID: String, completion: (Result<ToDoItemsList, Error>) -> Void)
+    func create(item: ToDoItem, listID: String, completion: (Result<Void, Error>) -> Void)
 }
 
 protocol ToDoItemsListWorkerReaderInterface {
@@ -17,8 +17,9 @@ final class ToDoItemsListWorker {
 }
 
 extension ToDoItemsListWorker: ToDoItemsListCreaterWorkerInterface {
-    func create(item: ToDoItem, listID: String, completion: (Result<ToDoItemsList, Error>) -> Void) {
-        
+    func create(item: ToDoItem, listID: String, completion: (Result<Void, Error>) -> Void) {
+        applicationDataStorage.save(item: item, listID: listID)
+        completion(.success(()))
     }
 }
 

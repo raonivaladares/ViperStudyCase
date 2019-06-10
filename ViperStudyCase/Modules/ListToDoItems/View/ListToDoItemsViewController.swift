@@ -47,11 +47,13 @@ extension ListToDoItemsViewController {
 }
 
 // MARK: - UITableViewDelegate
+
 extension ListToDoItemsViewController: UITableViewDelegate {
     
 }
 
 // MARK: - UITableViewDataSource
+
 extension ListToDoItemsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return toDoItemsList?.items.count ?? 0

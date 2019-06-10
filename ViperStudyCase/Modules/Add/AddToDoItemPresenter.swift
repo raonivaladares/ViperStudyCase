@@ -28,7 +28,7 @@ extension AddToDoItemPresenter: AddToDoItemPresenterInterface {
         interactor.addToDoItem(with: description, toListWithID: listID) { result in
             switch result {
             case .success:
-                print("deu bom")
+                router.returnToCallerController()
             case .failure(let error):
                 viewController?.presentError(error: error.asApplicationError())
             }

@@ -4,7 +4,7 @@ protocol AddToDoItemIteractorInterface {
     func addToDoItem(
         with description: String,
         toListWithID listID: String,
-        completion: (Result<ToDoItemsList, Error>) -> Void
+        completion: (Result<Void, Error>) -> Void
     )
 }
 
@@ -18,14 +18,14 @@ final class AddToDoItemIteractor {
     func addToDoItem(
         with description: String,
         toListWithID listID: String,
-        completion: (Result<ToDoItemsList, Error>) -> Void) {
+        completion: (Result<Void, Error>) -> Void) {
         
         do {
             let toDoItem = try ToDoItem(description: description)
             toDoItemsListWoker.create(item: toDoItem, listID: listID) { result in
                 switch result {
-                case .success(let list):
-                    completion(.success((list)))
+                case .success:
+                    completion(.success(()))
                 case .failure(let error):
                     completion(.failure(error))
                 }
