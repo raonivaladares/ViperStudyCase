@@ -30,6 +30,7 @@
 		FE4ABF6F2296DB1B00B1F781 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4ABF6D2296DB1B00B1F781 /* LaunchScreen.storyboard */; };
 		FE4ABF7A2296DB1B00B1F781 /* ViperStudyCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF792296DB1B00B1F781 /* ViperStudyCaseTests.swift */; };
 		FE4ABF852296DB1B00B1F781 /* ViperStudyCaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF842296DB1B00B1F781 /* ViperStudyCaseUITests.swift */; };
+		FE93349422AE8E66002513D2 /* ListToDoItemsViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93349322AE8E66002513D2 /* ListToDoItemsViewController+ViewModel.swift */; };
 		FED21D8622A9AD7D0023CFF6 /* GenericApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */; };
 		FED21D8822A9B2040023CFF6 /* Error+ApplicationErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */; };
 		FED21D8B22A9B2570023CFF6 /* ToDoItemsListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8A22A9B2570023CFF6 /* ToDoItemsListWorker.swift */; };
@@ -90,6 +91,7 @@
 		FE4ABF802296DB1B00B1F781 /* ViperStudyCaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperStudyCaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4ABF842296DB1B00B1F781 /* ViperStudyCaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperStudyCaseUITests.swift; sourceTree = "<group>"; };
 		FE4ABF862296DB1B00B1F781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE93349322AE8E66002513D2 /* ListToDoItemsViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListToDoItemsViewController+ViewModel.swift"; sourceTree = "<group>"; };
 		FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericApplicationError.swift; sourceTree = "<group>"; };
 		FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+ApplicationErrorType.swift"; sourceTree = "<group>"; };
 		FED21D8A22A9B2570023CFF6 /* ToDoItemsListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListWorker.swift; sourceTree = "<group>"; };
@@ -152,8 +154,8 @@
 		840247F722A307E200DF2A7B /* ListToDoItems */ = {
 			isa = PBXGroup;
 			children = (
+				FE93349222AE8E4F002513D2 /* View */,
 				840247FC22A31D8600DF2A7B /* ListToDoItemsModuleAssembler.swift */,
-				FE4ABF662296DB1A00B1F781 /* ListToDoItemsViewController.swift */,
 				8402480222A31F0600DF2A7B /* ListToDoItemsPresenter.swift */,
 				8402480422A322C700DF2A7B /* ListToDoItemsRouter.swift */,
 				8426FBD522AD7C17000B4BA6 /* ListToDoItemsInteractor.swift */,
@@ -278,6 +280,15 @@
 				FE4ABF862296DB1B00B1F781 /* Info.plist */,
 			);
 			path = ViperStudyCaseUITests;
+			sourceTree = "<group>";
+		};
+		FE93349222AE8E4F002513D2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FE4ABF662296DB1A00B1F781 /* ListToDoItemsViewController.swift */,
+				FE93349322AE8E66002513D2 /* ListToDoItemsViewController+ViewModel.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FED21D8E22AAC4620023CFF6 /* Protocols */ = {
@@ -516,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE93349422AE8E66002513D2 /* ListToDoItemsViewController+ViewModel.swift in Sources */,
 				FED21D8822A9B2040023CFF6 /* Error+ApplicationErrorType.swift in Sources */,
 				FED21D8B22A9B2570023CFF6 /* ToDoItemsListWorker.swift in Sources */,
 				840247F522A305B400DF2A7B /* AppDependencies.swift in Sources */,

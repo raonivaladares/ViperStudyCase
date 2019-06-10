@@ -2,9 +2,10 @@ import UIKit
 import SnapKit
 
 protocol ListToDoItemsViewControllerInterface {
+    func configure(with viewModel: ListToDoItemsViewController.ViewModel)
 }
 
-class ListToDoItemsViewController: UIViewController {
+class ListToDoItemsViewController: UIViewController, AlertPresentable {
     // MARK: - View Private properties
     
     private let tableView: UITableView = {
@@ -43,7 +44,21 @@ extension ListToDoItemsViewController {
 // MARK: - ListToDoItemsViewControllerInterface
 
 extension ListToDoItemsViewController: ListToDoItemsViewControllerInterface {
-    
+    func configure(with viewModel: ViewModel) {
+        if  viewModel.viewIsLoading {
+            //show loading
+        } else {
+            //hide loading
+        }
+        
+        if let toDoItemsList = viewModel.toDoItemsList {
+            // do something
+        }
+        
+        if let error = viewModel.showError {
+            self.presentAlert(with: error)
+        }
+    }
 }
 
 // MARK: - View - private methods
