@@ -13,10 +13,13 @@ final class ListToDoItemsModuleAssembler {
         let viewController = ListToDoItemsViewController()
         let router = ListToDoItemsRouter(navigationController: navigationController)
         let interactor = ListToDoItemsInteractor(dataStorage: dataStaroge)
-        let presenter = ListToDoItemsPresenter(router: router, interactor: interactor)
+        let presenter = ListToDoItemsPresenter(
+            router: router,
+            interactor: interactor,
+            viewController: viewController
+        )
         
         viewController.presenter = presenter
-        presenter.viewController = viewController
         
         return viewController
     }

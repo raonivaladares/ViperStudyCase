@@ -31,6 +31,8 @@
 		FE4ABF7A2296DB1B00B1F781 /* ViperStudyCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF792296DB1B00B1F781 /* ViperStudyCaseTests.swift */; };
 		FE4ABF852296DB1B00B1F781 /* ViperStudyCaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4ABF842296DB1B00B1F781 /* ViperStudyCaseUITests.swift */; };
 		FE93349422AE8E66002513D2 /* ListToDoItemsViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93349322AE8E66002513D2 /* ListToDoItemsViewController+ViewModel.swift */; };
+		FE93349722AEDA7A002513D2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93349622AEDA7A002513D2 /* LoadingView.swift */; };
+		FE93349922AEDB0D002513D2 /* ViewLoadAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93349822AEDB0D002513D2 /* ViewLoadAble.swift */; };
 		FED21D8622A9AD7D0023CFF6 /* GenericApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */; };
 		FED21D8822A9B2040023CFF6 /* Error+ApplicationErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */; };
 		FED21D8B22A9B2570023CFF6 /* ToDoItemsListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8A22A9B2570023CFF6 /* ToDoItemsListWorker.swift */; };
@@ -92,6 +94,8 @@
 		FE4ABF842296DB1B00B1F781 /* ViperStudyCaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperStudyCaseUITests.swift; sourceTree = "<group>"; };
 		FE4ABF862296DB1B00B1F781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE93349322AE8E66002513D2 /* ListToDoItemsViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListToDoItemsViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		FE93349622AEDA7A002513D2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FE93349822AEDB0D002513D2 /* ViewLoadAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadAble.swift; sourceTree = "<group>"; };
 		FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericApplicationError.swift; sourceTree = "<group>"; };
 		FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+ApplicationErrorType.swift"; sourceTree = "<group>"; };
 		FED21D8A22A9B2570023CFF6 /* ToDoItemsListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListWorker.swift; sourceTree = "<group>"; };
@@ -249,6 +253,7 @@
 		FE4ABF632296DB1A00B1F781 /* ViperStudyCase */ = {
 			isa = PBXGroup;
 			children = (
+				FE93349522AEDA6C002513D2 /* Views */,
 				FED21D8A22A9B2570023CFF6 /* ToDoItemsListWorker.swift */,
 				FED21D8E22AAC4620023CFF6 /* Protocols */,
 				840247FE22A31E2C00DF2A7B /* Comum */,
@@ -291,6 +296,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		FE93349522AEDA6C002513D2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE93349622AEDA7A002513D2 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FED21D8E22AAC4620023CFF6 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -303,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				FED21D8C22AAC4550023CFF6 /* AlertPresentable.swift */,
+				FE93349822AEDB0D002513D2 /* ViewLoadAble.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -539,6 +553,7 @@
 				840247FB22A31CEE00DF2A7B /* AppStartupRouter.swift in Sources */,
 				8426FBD622AD7C17000B4BA6 /* ListToDoItemsInteractor.swift in Sources */,
 				840247FD22A31D8600DF2A7B /* ListToDoItemsModuleAssembler.swift in Sources */,
+				FE93349922AEDB0D002513D2 /* ViewLoadAble.swift in Sources */,
 				8426FBD422AD64B5000B4BA6 /* ApplicationDataStorage.swift in Sources */,
 				FED21D8D22AAC4550023CFF6 /* AlertPresentable.swift in Sources */,
 				8402480B22A3FFAC00DF2A7B /* AddToDoItemRouter.swift in Sources */,
@@ -549,6 +564,7 @@
 				FED21D9122AAC7CE0023CFF6 /* ToDoItemsList.swift in Sources */,
 				8402480922A3FE1600DF2A7B /* AddToDoItemPresenter.swift in Sources */,
 				8402480F22A42AE400DF2A7B /* AddToDoItemIteractor.swift in Sources */,
+				FE93349722AEDA7A002513D2 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,11 +1,11 @@
 import UIKit
 import SnapKit
 
-protocol ListToDoItemsViewControllerInterface {
+protocol ListToDoItemsViewControllerInterface: class {
     func configure(with viewModel: ListToDoItemsViewController.ViewModel)
 }
 
-class ListToDoItemsViewController: UIViewController, AlertPresentable {
+class ListToDoItemsViewController: UIViewController, AlertPresentable, ViewLoadAble {
     // MARK: - View Private properties
     
     private let tableView: UITableView = {
@@ -20,12 +20,17 @@ class ListToDoItemsViewController: UIViewController, AlertPresentable {
     
     // MARK: - init
     
+    var toDoItemsList: ToDoItemsList?
+    
     init() {
         super.init(nibName: nil, bundle: nil)
         
         configureNavigation()
         configureViews()
         configureConstraints()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,18 +46,38 @@ extension ListToDoItemsViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+extension ListToDoItemsViewController: UITableViewDelegate {
+    
+}
+
+// MARK: - UITableViewDataSource
+extension ListToDoItemsViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return toDoItemsList?.items.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.textLabel?.text = toDoItemsList?.items[indexPath.row].description
+        
+        return cell
+    }
+}
+
 // MARK: - ListToDoItemsViewControllerInterface
 
 extension ListToDoItemsViewController: ListToDoItemsViewControllerInterface {
     func configure(with viewModel: ViewModel) {
         if  viewModel.viewIsLoading {
-            //show loading
+            showLoading()
         } else {
-            //hide loading
+            hideLoading()
         }
         
         if let toDoItemsList = viewModel.toDoItemsList {
-            // do something
+            self.toDoItemsList = toDoItemsList
+            tableView.reloadData()
         }
         
         if let error = viewModel.showError {
@@ -86,4 +111,3 @@ extension ListToDoItemsViewController {
         }
     }
 }
-
