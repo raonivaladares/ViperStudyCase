@@ -1,6 +1,6 @@
 import UIKit
 
-final class ListToDoItemsRouter {
+final class ToDoItemsListRouter {
     private let navigationController: UINavigationController
     
     init(navigationController: UINavigationController) {

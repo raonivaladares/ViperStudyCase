@@ -1,6 +1,6 @@
 import UIKit
 
-final class ListToDoItemsModuleAssembler {
+final class ToDoItemsListModuleAssembler {
     private let dataStaroge: ApplicationDataStorageInterface
     
     init(dataStaroge: ApplicationDataStorageInterface =
@@ -9,11 +9,11 @@ final class ListToDoItemsModuleAssembler {
         self.dataStaroge = dataStaroge
     }
     
-    func assemble(navigationController: UINavigationController) -> ListToDoItemsViewController {
-        let viewController = ListToDoItemsViewController()
-        let router = ListToDoItemsRouter(navigationController: navigationController)
-        let interactor = ListToDoItemsInteractor(dataStorage: dataStaroge)
-        let presenter = ListToDoItemsPresenter(
+    func assemble(navigationController: UINavigationController) -> ToDoItemsListViewController {
+        let viewController = ToDoItemsListViewController()
+        let router = ToDoItemsListRouter(navigationController: navigationController)
+        let interactor = ToDoItemsListInteractor(dataStorage: dataStaroge)
+        let presenter = ToDoItemsListPresenter(
             router: router,
             interactor: interactor,
             viewController: viewController

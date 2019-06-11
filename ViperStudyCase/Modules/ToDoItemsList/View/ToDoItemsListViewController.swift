@@ -1,11 +1,11 @@
 import UIKit
 import SnapKit
 
-protocol ListToDoItemsViewControllerInterface: class {
-    func configure(with viewModel: ListToDoItemsViewController.ViewModel)
+protocol ToDoItemsListViewControllerInterface: class {
+    func configure(with viewModel: ToDoItemsListViewController.ViewModel)
 }
 
-class ListToDoItemsViewController: UIViewController, AlertPresentable, ViewLoadAble {
+class ToDoItemsListViewController: UIViewController, AlertPresentable, ViewLoadAble {
     // MARK: - View Private properties
     
     private let tableView: UITableView = {
@@ -16,7 +16,7 @@ class ListToDoItemsViewController: UIViewController, AlertPresentable, ViewLoadA
     
     // MARK: - Public properties
     
-    var presenter: ListToDoItemsPresenterInterface?
+    var presenter: ToDoItemsListPresenterInterface?
     
     // MARK: - init
     
@@ -40,7 +40,7 @@ class ListToDoItemsViewController: UIViewController, AlertPresentable, ViewLoadA
 
 // MARK: - life cycle
 
-extension ListToDoItemsViewController {
+extension ToDoItemsListViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -54,13 +54,13 @@ extension ListToDoItemsViewController {
 
 // MARK: - UITableViewDelegate
 
-extension ListToDoItemsViewController: UITableViewDelegate {
+extension ToDoItemsListViewController: UITableViewDelegate {
     
 }
 
 // MARK: - UITableViewDataSource
 
-extension ListToDoItemsViewController: UITableViewDataSource {
+extension ToDoItemsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return toDoItemsList?.items.count ?? 0
     }
@@ -75,7 +75,7 @@ extension ListToDoItemsViewController: UITableViewDataSource {
 
 // MARK: - ListToDoItemsViewControllerInterface
 
-extension ListToDoItemsViewController: ListToDoItemsViewControllerInterface {
+extension ToDoItemsListViewController: ToDoItemsListViewControllerInterface {
     func configure(with viewModel: ViewModel) {
         if  viewModel.viewIsLoading {
             showLoading()
@@ -96,7 +96,7 @@ extension ListToDoItemsViewController: ListToDoItemsViewControllerInterface {
 
 // MARK: - View - private methods
 
-extension ListToDoItemsViewController {
+extension ToDoItemsListViewController {
     private func configureNavigation() {
         navigationItem.rightBarButtonItem =  UIBarButtonItem(
             barButtonSystemItem: .add,

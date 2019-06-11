@@ -1,6 +1,6 @@
 import Foundation
 
-extension ListToDoItemsViewController {
+extension ToDoItemsListViewController {
     struct ViewModel {
         enum ViewState {
             case loading

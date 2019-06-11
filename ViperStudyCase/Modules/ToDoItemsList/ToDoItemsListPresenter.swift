@@ -1,43 +1,43 @@
 import Foundation
 
-protocol ListToDoItemsPresenterInterface {
+protocol ToDoItemsListPresenterInterface {
     func addButtonWasTapped()
     func viewDidAppearWasCalled()
 }
 
-final class ListToDoItemsPresenter {
-    private let router: ListToDoItemsRouter
-    private let interactor: ListToDoItemsInteractorInterface
+final class ToDoItemsListPresenter {
+    private let router: ToDoItemsListRouter
+    private let interactor: ToDoItemsListInteractorInterface
     
-    private weak var viewController: ListToDoItemsViewControllerInterface?
+    private weak var viewController: ToDoItemsListViewControllerInterface?
     
     init(
-        router: ListToDoItemsRouter,
-        interactor: ListToDoItemsInteractorInterface,
-        viewController: ListToDoItemsViewControllerInterface) {
+        router: ToDoItemsListRouter,
+        interactor: ToDoItemsListInteractorInterface,
+        viewController: ToDoItemsListViewControllerInterface) {
         
         self.router = router
         self.interactor = interactor
         self.viewController = viewController
         
-        let viewModel = ListToDoItemsViewController
+        let viewModel = ToDoItemsListViewController
             .ViewModel(viewState: .loading)
         viewController.configure(with: viewModel)
     }
 }
 
-// MARK: - ListToDoItemsPresenterInterface
+// MARK: - ToDoItemsListPresenterInterface
 
-extension ListToDoItemsPresenter: ListToDoItemsPresenterInterface {
+extension ToDoItemsListPresenter: ToDoItemsListPresenterInterface {
     func viewDidAppearWasCalled() {
         interactor.getList(withID: "22") { [weak self] result in
             switch result {
             case .success(let toDoItemsList):
-                let viewModel = ListToDoItemsViewController
+                let viewModel = ToDoItemsListViewController
                     .ViewModel(viewState: .showContent(content: toDoItemsList))
                 self?.viewController?.configure(with: viewModel)
             case .failure(let error):
-                let viewModel = ListToDoItemsViewController
+                let viewModel = ToDoItemsListViewController
                     .ViewModel(viewState: .showError(error: error.asApplicationError()))
                 self?.viewController?.configure(with: viewModel)
             }

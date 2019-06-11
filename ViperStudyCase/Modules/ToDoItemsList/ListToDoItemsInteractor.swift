@@ -1,10 +1,10 @@
 import Foundation
 
-protocol ListToDoItemsInteractorInterface {
+protocol ToDoItemsListInteractorInterface {
     func getList(withID listID: String, completion: @escaping (Result<ToDoItemsList, Error>) -> Void)
 }
 
-final class ListToDoItemsInteractor: ListToDoItemsInteractorInterface {
+final class ToDoItemsListInteractor: ToDoItemsListInteractorInterface {
     private let dataStorage: ApplicationDataStorageInterface
     
     init(dataStorage: ApplicationDataStorageInterface) {
