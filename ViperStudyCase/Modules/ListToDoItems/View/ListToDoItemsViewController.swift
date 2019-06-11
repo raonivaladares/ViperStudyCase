@@ -44,6 +44,12 @@ extension ListToDoItemsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presenter?.viewDidAppearWasCalled()
+    }
 }
 
 // MARK: - UITableViewDelegate

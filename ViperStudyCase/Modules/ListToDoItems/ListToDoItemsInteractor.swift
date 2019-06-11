@@ -12,10 +12,8 @@ final class ListToDoItemsInteractor: ListToDoItemsInteractorInterface {
     }
     
     func getList(withID listID: String, completion: @escaping (Result<ToDoItemsList, Error>) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { [weak self] in
-            self?.dataStorage.read(listID: listID) { result in
-                completion(result)
-            }
+        dataStorage.read(listID: listID) { result in
+            completion(result)
         }
     }
 }
