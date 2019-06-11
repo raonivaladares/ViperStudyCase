@@ -359,6 +359,7 @@
 				FE4ABF712296DB1B00B1F781 /* Sources */,
 				FE4ABF722296DB1B00B1F781 /* Frameworks */,
 				FE4ABF732296DB1B00B1F781 /* Resources */,
+				0FF8884FE408523A663EE69D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -459,6 +460,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0FF8884FE408523A663EE69D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViperStudyCaseTests/Pods-ViperStudyCaseTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViperStudyCaseTests/Pods-ViperStudyCaseTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ViperStudyCaseTests/Pods-ViperStudyCaseTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		546980D6D0E5179D85C7A7A0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
