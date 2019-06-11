@@ -33,6 +33,7 @@
 		FE93349422AE8E66002513D2 /* ToDoItemsListViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93349322AE8E66002513D2 /* ToDoItemsListViewController+ViewModel.swift */; };
 		FE93349722AEDA7A002513D2 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93349622AEDA7A002513D2 /* LoadingView.swift */; };
 		FE93349922AEDB0D002513D2 /* ViewLoadAble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93349822AEDB0D002513D2 /* ViewLoadAble.swift */; };
+		FE93349D22AFF0DF002513D2 /* ToDoItemsListWorkerSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE93349C22AFF0DF002513D2 /* ToDoItemsListWorkerSpecs.swift */; };
 		FED21D8622A9AD7D0023CFF6 /* GenericApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */; };
 		FED21D8822A9B2040023CFF6 /* Error+ApplicationErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */; };
 		FED21D8B22A9B2570023CFF6 /* ToDoItemsListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED21D8A22A9B2570023CFF6 /* ToDoItemsListWorker.swift */; };
@@ -96,6 +97,7 @@
 		FE93349322AE8E66002513D2 /* ToDoItemsListViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoItemsListViewController+ViewModel.swift"; sourceTree = "<group>"; };
 		FE93349622AEDA7A002513D2 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FE93349822AEDB0D002513D2 /* ViewLoadAble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLoadAble.swift; sourceTree = "<group>"; };
+		FE93349C22AFF0DF002513D2 /* ToDoItemsListWorkerSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListWorkerSpecs.swift; sourceTree = "<group>"; };
 		FED21D8522A9AD7D0023CFF6 /* GenericApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericApplicationError.swift; sourceTree = "<group>"; };
 		FED21D8722A9B2040023CFF6 /* Error+ApplicationErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+ApplicationErrorType.swift"; sourceTree = "<group>"; };
 		FED21D8A22A9B2570023CFF6 /* ToDoItemsListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemsListWorker.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 		FE4ABF782296DB1B00B1F781 /* ViperStudyCaseTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE93349B22AFF08E002513D2 /* Workers */,
 				FE4ABF792296DB1B00B1F781 /* ViperStudyCaseTests.swift */,
 				FE4ABF7B2296DB1B00B1F781 /* Info.plist */,
 			);
@@ -308,6 +311,14 @@
 			isa = PBXGroup;
 			children = (
 				FED21D8A22A9B2570023CFF6 /* ToDoItemsListWorker.swift */,
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		FE93349B22AFF08E002513D2 /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+				FE93349C22AFF0DF002513D2 /* ToDoItemsListWorkerSpecs.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -599,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE4ABF7A2296DB1B00B1F781 /* ViperStudyCaseTests.swift in Sources */,
+				FE93349D22AFF0DF002513D2 /* ToDoItemsListWorkerSpecs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
