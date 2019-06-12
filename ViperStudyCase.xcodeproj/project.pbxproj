@@ -257,6 +257,7 @@
 		FE4ABF632296DB1A00B1F781 /* ViperStudyCase */ = {
 			isa = PBXGroup;
 			children = (
+				FE93349E22B12279002513D2 /* DataStorage */,
 				FED21D8E22AAC4620023CFF6 /* Protocols */,
 				840247FE22A31E2C00DF2A7B /* Comum */,
 				840247F622A3076E00DF2A7B /* Modules */,
@@ -321,6 +322,13 @@
 				FE93349C22AFF0DF002513D2 /* ToDoItemsListWorkerSpecs.swift */,
 			);
 			path = Workers;
+			sourceTree = "<group>";
+		};
+		FE93349E22B12279002513D2 /* DataStorage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStorage;
 			sourceTree = "<group>";
 		};
 		FED21D8E22AAC4620023CFF6 /* Protocols */ = {

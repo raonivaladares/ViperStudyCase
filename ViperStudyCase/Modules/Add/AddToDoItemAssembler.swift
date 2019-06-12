@@ -1,9 +1,9 @@
 import UIKit
 
 final class AddToDoItemAssembler {
-    private let dataStaroge: ApplicationDataStorageInterface
+    private let dataStaroge: ApplicationDataStorageCreatorInterface
     
-    init(dataStaroge: ApplicationDataStorageInterface =
+    init(dataStaroge: ApplicationDataStorageCreatorInterface =
         AppDependencies.shared.applicationDataStorage) {
         
         self.dataStaroge = dataStaroge

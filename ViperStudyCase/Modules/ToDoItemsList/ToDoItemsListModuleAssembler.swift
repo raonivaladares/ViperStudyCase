@@ -1,9 +1,9 @@
 import UIKit
 
 final class ToDoItemsListModuleAssembler {
-    private let dataStaroge: ApplicationDataStorageInterface
+    private let dataStaroge: ApplicationDataStorageReaderInterface
     
-    init(dataStaroge: ApplicationDataStorageInterface =
+    init(dataStaroge: ApplicationDataStorageReaderInterface =
         AppDependencies.shared.applicationDataStorage) {
         
         self.dataStaroge = dataStaroge

@@ -9,16 +9,16 @@ protocol ToDoItemsListWorkerReaderInterface {
 }
 
 final class ToDoItemsListWorker {
-    private let applicationDataStorage: ApplicationDataStorageInterface
+    private let applicationDataStorage: ApplicationDataStorageCreatorInterface
     
-    init(applicationDataStorage: ApplicationDataStorageInterface) {
+    init(applicationDataStorage: ApplicationDataStorageCreatorInterface) {
         self.applicationDataStorage = applicationDataStorage
     }
 }
 
 extension ToDoItemsListWorker: ToDoItemsListCreaterWorkerInterface {
     func create(item: ToDoItem, listID: String, completion: (Result<Void, Error>) -> Void) {
-        applicationDataStorage.save(item: item, listID: listID)
+        applicationDataStorage.create(item: item, listID: listID)
         completion(.success(()))
     }
 }

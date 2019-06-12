@@ -1,11 +1,14 @@
 import Foundation
 
-protocol ApplicationDataStorageInterface {
-    func save(item: ToDoItem, listID: String)
+protocol ApplicationDataStorageCreatorInterface {
+    func create(item: ToDoItem, listID: String)
+}
+
+protocol ApplicationDataStorageReaderInterface {
     func read(listID: String, completion: (Result<ToDoItemsList, Error>) -> Void)
 }
 
-final class ApplicationDataStorage: ApplicationDataStorageInterface {
+final class ApplicationDataStorage {
     private var toDoItemsLists: [ToDoItemsList] = []
     
     init() {
@@ -16,8 +19,10 @@ final class ApplicationDataStorage: ApplicationDataStorageInterface {
         )
         toDoItemsLists.append(stub)
     }
-    
-    func save(item: ToDoItem, listID: String) {
+}
+
+extension ApplicationDataStorage: ApplicationDataStorageCreatorInterface {
+    func create(item: ToDoItem, listID: String) {
         let listToInsertIndex = toDoItemsLists.lastIndex { $0.id == listID }
         
         guard let index = listToInsertIndex else { return }
@@ -29,7 +34,9 @@ final class ApplicationDataStorage: ApplicationDataStorageInterface {
         let newList = ToDoItemsList(id: id, name: name, items: items)
         toDoItemsLists[index] = newList
     }
-    
+}
+
+extension ApplicationDataStorage: ApplicationDataStorageReaderInterface {
     func read(listID: String, completion: (Result<ToDoItemsList, Error>) -> Void) {
         let listIndex = toDoItemsLists.lastIndex { $0.id == listID }
         if let index = listIndex {

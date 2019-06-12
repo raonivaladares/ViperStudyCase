@@ -6,36 +6,40 @@ import Nimble
 final class ToDoItemsListWorkerSpecs: QuickSpec {
     override func spec() {
         describe("ToDoItemsListWorker") {
-            let dataStorage = ApplicationDataStorage()
-            let toDoItemsListWorker = ToDoItemsListWorker(applicationDataStorage: dataStorage)
             
-            it("create") {
-                let item = try! ToDoItem(description: "stub")
-                toDoItemsListWorker.create(item: item, listID: "22") { result in
-                    
+            context("ApplicationDataStorageCreatorInterface") {
+                context("success") {
+                    let dataStorage = MockDataStorageForCreation(expectedReult: .success)
+                    let toDoItemsListWorker = ToDoItemsListWorker(applicationDataStorage: dataStorage)
+                    it("create") {
+                        let item = try! ToDoItem(description: "stub")
+                        toDoItemsListWorker.create(item: item, listID: "22") { result in
+                            
+                        }
+                    }
                 }
-            }
-            
-            it("read") {
-                toDoItemsListWorker.read(listID: "22") { result in
-                    
+                
+                context("failure") {
+                    let dataStorage = MockDataStorageForCreation(expectedReult: .failure)
                 }
             }
         } // ToDoItemsListWorker
     }
 }
 
-final class MockDataStorage: ApplicationDataStorageInterface {
-    enum ResultExpected {
+final class MockDataStorageForCreation: ApplicationDataStorageCreatorInterface {
+    enum ExpectedReult {
         case success
         case failure
     }
     
-    func save(item: ToDoItem, listID: String) {
-        
+    let expectedReult: ExpectedReult
+    
+    init(expectedReult: ExpectedReult) {
+        self.expectedReult = expectedReult
     }
     
-    func read(listID: String, completion: (Result<ToDoItemsList, Error>) -> Void) {
+    func create(item: ToDoItem, listID: String) {
         
     }
 }

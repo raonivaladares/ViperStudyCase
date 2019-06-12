@@ -5,9 +5,9 @@ protocol ToDoItemsListInteractorInterface {
 }
 
 final class ToDoItemsListInteractor: ToDoItemsListInteractorInterface {
-    private let dataStorage: ApplicationDataStorageInterface
+    private let dataStorage: ApplicationDataStorageReaderInterface
     
-    init(dataStorage: ApplicationDataStorageInterface) {
+    init(dataStorage: ApplicationDataStorageReaderInterface) {
         self.dataStorage = dataStorage
     }
     
